@@ -1,23 +1,32 @@
-name: territory_runner
-description: Territory fitness game MVP
+name: territory_run
+description: Territory-based fitness tracking game
+
 publish_to: 'none'
-version: 0.1.0+1
+version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-  geolocator: ^12.0.0
-  flutter_map: ^7.0.2
-  latlong2: ^0.9.1
+
+  # Map rendering (uses OpenStreetMap tiles — no API key needed)
+  flutter_map: ^6.1.0
+
+  # GPS location stream
+  geolocator: ^11.0.0
+
+  # Lat/Lng data type used by flutter_map
+  latlong2: ^0.9.0
+
+  # State management
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^4.0.0
+  flutter_lints: ^3.0.0
 
 flutter:
   uses-material-design: true
